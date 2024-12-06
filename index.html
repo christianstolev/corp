@@ -17,6 +17,7 @@
       crossorigin="anonymous"
     ></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://kit.fontawesome.com/de4851ac23.js" crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,19 +28,32 @@
 <body>
   <header class="top-header">
     <div class="c-holder">
-      <div class="ch-1">
-        <h1>KiGen</h1>
+      <div class="ch-1 d-flex align-items-center">
+        <svg width="608" height="197" style="height: 50px; 
+        width: auto;
+        padding-left: 5px;" viewBox="0 0 608 197" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_22_219)">
+          <rect id="svg-bg" width="608" height="197" rx="39" fill="white"/>
+          <path id="svg-text" d="M110.563 143L80.591 103.63V143H58.874V53.846H80.591V92.962L110.309 53.846H135.836L101.292 97.534L137.106 143H110.563ZM158.349 64.768C154.539 64.768 151.406 63.6673 148.951 61.466C146.58 59.18 145.395 56.386 145.395 53.084C145.395 49.6973 146.58 46.9033 148.951 44.702C151.406 42.416 154.539 41.273 158.349 41.273C162.074 41.273 165.122 42.416 167.493 44.702C169.948 46.9033 171.176 49.6973 171.176 53.084C171.176 56.386 169.948 59.18 167.493 61.466C165.122 63.6673 162.074 64.768 158.349 64.768ZM169.144 72.134V143H147.427V72.134H169.144ZM244.064 82.04C242.455 79.0767 240.127 76.833 237.079 75.309C234.115 73.7003 230.602 72.896 226.538 72.896C219.51 72.896 213.88 75.2243 209.647 79.881C205.413 84.453 203.297 90.5913 203.297 98.296C203.297 106.509 205.498 112.943 209.901 117.6C214.388 122.172 220.526 124.458 228.316 124.458C233.65 124.458 238.137 123.103 241.778 120.394C245.503 117.685 248.212 113.79 249.906 108.71H222.347V92.708H269.591V112.901C267.982 118.32 265.23 123.357 261.336 128.014C257.526 132.671 252.657 136.438 246.731 139.317C240.804 142.196 234.115 143.635 226.665 143.635C217.859 143.635 209.985 141.73 203.043 137.92C196.185 134.025 190.808 128.649 186.914 121.791C183.104 114.933 181.199 107.101 181.199 98.296C181.199 89.4907 183.104 81.659 186.914 74.801C190.808 67.8583 196.185 62.482 203.043 58.672C209.901 54.7773 217.732 52.83 226.538 52.83C237.206 52.83 246.18 55.4123 253.462 60.577C260.828 65.7417 265.696 72.896 268.067 82.04H244.064ZM348.422 106.424C348.422 108.456 348.295 110.573 348.041 112.774H298.892C299.231 117.177 300.628 120.563 303.083 122.934C305.623 125.22 308.713 126.363 312.354 126.363C317.773 126.363 321.54 124.077 323.657 119.505H346.771C345.586 124.162 343.427 128.353 340.294 132.078C337.246 135.803 333.394 138.724 328.737 140.841C324.08 142.958 318.873 144.016 313.116 144.016C306.173 144.016 299.993 142.534 294.574 139.571C289.155 136.608 284.922 132.374 281.874 126.871C278.826 121.368 277.302 114.933 277.302 107.567C277.302 100.201 278.784 93.7663 281.747 88.263C284.795 82.7597 289.028 78.5263 294.447 75.563C299.866 72.5997 306.089 71.118 313.116 71.118C319.974 71.118 326.07 72.5573 331.404 75.436C336.738 78.3147 340.887 82.421 343.85 87.755C346.898 93.089 348.422 99.312 348.422 106.424ZM326.197 100.709C326.197 96.9837 324.927 94.0203 322.387 91.819C319.847 89.6177 316.672 88.517 312.862 88.517C309.221 88.517 306.131 89.5753 303.591 91.692C301.136 93.8087 299.612 96.8143 299.019 100.709H326.197ZM403.059 71.372C411.356 71.372 417.96 74.0813 422.871 79.5C427.866 84.834 430.364 92.2 430.364 101.598V143H408.774V104.519C408.774 99.7777 407.546 96.0947 405.091 93.47C402.636 90.8453 399.334 89.533 395.185 89.533C391.036 89.533 387.734 90.8453 385.279 93.47C382.824 96.0947 381.596 99.7777 381.596 104.519V143H359.879V72.134H381.596V81.532C383.797 78.3993 386.761 75.944 390.486 74.166C394.211 72.3033 398.402 71.372 403.059 71.372Z" fill="black"/>
+          <path id="svg-smile" d="M487.604 110.171C485.731 108.67 484.625 106.894 484.285 104.845C484.021 102.787 484.539 100.947 485.84 99.3242C487.174 97.6596 488.874 96.7324 490.94 96.5428C493.047 96.3865 495.037 97.0589 496.91 98.5599C498.741 100.028 499.789 101.79 500.054 103.848C500.36 105.939 499.846 107.816 498.512 109.481C497.211 111.104 495.506 111.994 493.399 112.15C491.367 112.298 489.435 111.638 487.604 110.171ZM507.968 84.7645C506.095 83.2635 504.989 81.4883 504.649 79.439C504.385 77.3814 504.903 75.5411 506.204 73.9182C507.538 72.2536 509.238 71.3264 511.304 71.1368C513.411 70.9805 515.401 71.6529 517.274 73.1539C519.105 74.6216 520.153 76.3842 520.417 78.4418C520.724 80.5327 520.21 82.4105 518.875 84.0751C517.575 85.6981 515.87 86.5877 513.763 86.744C511.73 86.892 509.799 86.2322 507.968 84.7645ZM487.421 130.632L488.221 129.633C495.852 128.641 503.18 126.107 510.205 122.032C517.231 117.958 523.295 112.737 528.399 106.37C533.535 99.9609 537.336 92.7888 539.801 84.8533C542.299 76.8762 543.097 68.9725 542.197 61.1421L542.997 60.1434L553.484 68.5491C554.635 75.8966 553.874 83.6255 551.201 91.7357C548.562 99.8042 544.373 107.417 538.636 114.575C532.965 121.65 526.555 127.345 519.404 131.661C512.254 135.978 505.109 138.453 497.97 139.088L487.421 130.632Z" fill="black"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_22_219">
+          <rect width="608" height="197" rx="39" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>
       </div>
       <div class="ch-2">
-        <div class="top-items">
-          <div>
+        <div class="top-items d-flex justify-content-end gap-3">
+          <div class="d-none d-md-block d-lg-block">
             <a href="#">
               <i class="fa-solid fa-bell fa-xl"></i>
             </a>
           </div>
-          <div>
+          <div class="d-none d-md-block d-lg-block">
             <a href="#">
-              <p>Create project</p>
+              <p class="mb-0">Create project</p>
             </a>
           </div>
           <div>
@@ -51,35 +65,141 @@
       </div>
     </div>
   </header>
-  <aside class="side-panel">
-    <h3>Navigation</h3>
-
-    <div class="tab-holder">
-      <div>
-        <a href="#">
-          <i class="fa-solid fa-house-user fa-xl"></i>
-          <p>Dashboard</p>
-        </a>
+  <div class="holder d-flex">
+    <aside class="side-panel p-0 d-none d-lg-block">
+      <h3 class="ps-3">Navigation</h3>
+      <div class="tab-holder mt-3">
+        <div>
+          <a href="#" class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-house-user fa-xl"></i>
+            <p class="mb-0">Dashboard</p>
+          </a>
+        </div>
+        <div>
+          <a href="#" class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-book fa-xl"></i>
+            <p class="mb-0">API Docs</p>
+          </a>
+        </div>
+        <div>
+          <a href="#" class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-wallet fa-xl"></i>
+            <p class="mb-0">Payments</p>
+          </a>
+        </div>
+        <div>
+          <a href="#" class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-envelope-open-text fa-xl"></i>
+            <p class="mb-0">Support Center</p>
+          </a>
+        </div>
       </div>
-      <div>
-        <a href="#">
-          <i class="fa-solid fa-book fa-xl"></i>
-          <p>API Docs</p>
-        </a>
+    </aside>
+    <div class="content w-100 p-4">
+      <h1 class="fw-bold fs-4">Dashboard</h1>
+      <div class="stats-num-display d-flex gap-3 w-100">
+        <div class="display-box flex-grow-1 d-none d-md-flex d-lg-flex">
+          <div>
+            <h4>Requests</h4>
+            <h5>0</h5>
+            <h6>description</h6>
+          </div>
+          <div>
+            <h4>Auths</h4>
+            <h5>0</h5>
+            <h6>description</h6>
+          </div>
+          <div>
+            <h4>Projects</h4>
+            <h5>0</h5>
+            <h6>description</h6>
+          </div>
+        </div>
+        <div class="display-box flex-grow-1">
+          <div>
+            <h4>Balance</h4>
+            <h5>0.03 €</h5>
+            <h6>description</h6>
+          </div>
+        </div>
       </div>
-      <div>
-        <a href="#">
-          <i class="fa-solid fa-wallet fa-xl"></i>
-          <p>Payments</p>
-        </a>
-      </div>
-      <div>
-        <a href="#">
-          <i class="fa-solid fa-envelope-open-text fa-xl"></i>
-          <p>Support Center</p>
-        </a>
+      <div class="chart-container mt-4">
+        <canvas id="myChart"></canvas>
+        <div class="chart-legend mt-3">
+          <span class="text-success">● OK auths</span>
+          <span class="text-danger ms-3">● Failed auths</span>
+        </div>
       </div>
     </div>
-  </aside>
+  </div>
 </body>
+
+
+<script>
+  const ctx = document.getElementById('myChart').getContext('2d');
+  const myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['-80', '-70', '-60', '-50', '-40', '-30', '-20', '-10'], // X-axis labels
+      datasets: [
+        {
+          label: 'OK auths',
+          data: [20, 25, 35, 45, 55, 50, 40, 30], // Data points
+          borderColor: '#4CAF50',
+          backgroundColor: 'rgba(76, 175, 80, 0.1)', // Slightly transparent fill
+          tension: 0.4,
+          borderWidth: 3,
+          pointRadius: 0, // No points
+        },
+        {
+          label: 'Failed auths',
+          data: [30, 40, 50, 60, 75, 65, 55, 45], // Data points
+          borderColor: '#FF5252',
+          backgroundColor: 'rgba(255, 82, 82, 0.1)', // Slightly transparent fill
+          tension: 0.4,
+          borderWidth: 3,
+          pointRadius: 6, // Larger points
+          pointBackgroundColor: '#FF5252',
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false, // Custom legend outside
+        },
+        tooltip: {
+          callbacks: {
+            label: function (context) {
+              return `${context.dataset.label}: ${context.raw}`;
+            },
+          },
+        },
+      },
+      scales: {
+        x: {
+          grid: {
+            color: 'rgba(255, 255, 255, 0.1)', // Gridline color
+          },
+          ticks: {
+            color: '#ffffff', // Text color
+          },
+        },
+        y: {
+          grid: {
+            color: 'rgba(255, 255, 255, 0.1)', // Gridline color
+          },
+          ticks: {
+            color: '#ffffff', // Text color
+            callback: function (value) {
+              return value; // Add km to y-axis ticks
+            },
+          },
+        },
+      },
+    },
+  });
+</script>
 </html>

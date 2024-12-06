@@ -100,6 +100,8 @@ h3 {
     height: 50px;
     background-color: transparent;
     color: #B4C5D9;
+    padding: 0;
+    margin: 0;
 }
 
 .tab-holder div:nth-child(1) {
@@ -124,8 +126,71 @@ h3 {
     padding-left: 15px !important;
 }
 .tab-holder div p {
-    height: 100%;
+    height: auto;
     line-height: 68px;
     transition: all .2s ease;
     padding-left: 10px !important;
+
+}
+
+.holder {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 60px);
+}
+
+.content {
+    width: 100%;
+}
+
+.stats-num-display .display-box {
+    border-radius: 4px;
+    border: 1px rgba(255, 255, 255, 0.29) solid;
+    background-color: #202020;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.display-box div {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding-top: 12px;
+}
+.display-box div h4 {
+    padding: 0;
+    margin: 0;
+}
+.display-box div h5 {
+    padding-top: 5px;
+}
+.display-box div h6 {
+    font-size: 12px;
+    opacity: .8;
+}
+.stats-num-display .display-box:nth-child(2) {
+    background-color: #679ED1;
+    color: #292D32;
+}
+
+.ch-1:hover #svg-bg {
+    transition: all 0.2s linear;
+    fill: rgb(23, 23, 23);
+}
+.ch-1:hover #svg-text {
+    transition: all 0.2s linear;
+    fill: rgb(170, 170, 170);
+}
+.chart-container {
+  width: calc(100% - 100px);
+  max-height: calc(260px) !important;
+  max-width: calc(100% - 100px);
+  margin: 50px;
+}
+.chart-legend {
+  text-align: center;
+  margin-top: 10px;
 }
